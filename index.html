@@ -2,13 +2,21 @@
 <html ng-app>
   <head>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+    <script>
+        function Control($scope) {
+            $scope.value1 = "TomDaBomb";
+            $scope.value2 = "Boyyyyyy";
+        }
+    </script>
   </head>
   <body>
-    <div>
-      <label>Name:</label>
-      <input ng-model="yourName" type="text" placeholder="Enter a name here">
-      <hr>
-      <h1>Hello {{yourName}}!</h1>
+    <div ng-controller="Control">
+        <input ng-model="value1"><br>
+        {{value}}
+    </div>
+    <div ng-controller="Control">
+        <input ng-model="value2"><br>
+        {{value}}
     </div>
   </body>
 </html>
