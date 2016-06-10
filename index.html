@@ -4,17 +4,17 @@
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
     <script>
         function UsersCtrl($scope) {
-            $scope.users = [{name: "Jonh", age: 21}, {name: "Alice", age: 29}];
+            $scope.info = "The button hasn't been clicked yet";
+            $scope.click = function () {
+                 $scope.info = "You've cliked the button!"
+            };
         }
     </script>
   </head>
   <body>
     <div ng-controller="UsersCtrl">
-        <ul>
-            <li ng-repeat="element in array">
-                Name: {{user.name}}, {{user.age}} years old.
-            </li>
-        </ul>
+        <p>{{info}}</p>
+        <button ng-click="click()">Click me!</button>
     </div>
   </body>
 </html>
