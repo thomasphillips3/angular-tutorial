@@ -3,20 +3,18 @@
   <head>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
     <script>
-        function Control($scope) {
-            $scope.value1 = "TomDaBomb";
-            $scope.value2 = "Boyyyyyy";
+        function UsersCtrl($scope) {
+            $scope.users = [{name: "Jonh", age: 21}, {name: "Alice", age: 29}];
         }
     </script>
   </head>
   <body>
-    <div ng-controller="Control">
-        <input ng-model="value1"><br>
-        {{value}}
-    </div>
-    <div ng-controller="Control">
-        <input ng-model="value2"><br>
-        {{value}}
+    <div ng-controller="UsersCtrl">
+        <ul>
+            <li ng-repeat="element in array">
+                Name: {{user.name}}, {{user.age}} years old.
+            </li>
+        </ul>
     </div>
   </body>
 </html>
